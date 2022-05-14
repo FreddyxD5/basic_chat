@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path,include
-from chat.views import home
+from chatapp.views import index_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', home),
-    path('chat/',include('chat.urls')),
+    path('', index_view),
+    # path('chat/',include('chat.urls')),    
     path('chatapp/',include('chatapp.urls')),
     
 ]
